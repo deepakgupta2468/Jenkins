@@ -11,6 +11,7 @@ public class JenkinsGithubIntegrationApplication {
 
 	public static void main(String[] args) {
 
+		logger.info("Application is Starting..");
 		SpringApplication.run(JenkinsGithubIntegrationApplication.class, args);
 		logger.info("Application is Up and Running");	
 	}

@@ -12,7 +12,7 @@ public class JenkinsGithubIntegrationApplication {
 	public static void main(String[] args) {
 
 		SpringApplication.run(JenkinsGithubIntegrationApplication.class, args);
-		logger.info("Application is Up and Running ..");	
+		logger.info("Application is Up and Running");	
 	}
 
 }

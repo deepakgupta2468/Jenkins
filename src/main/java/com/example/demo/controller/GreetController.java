@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class GreetController {
 	
 	@GetMapping("/hi")
-	 public String greet() {
-		return "Hi Everyone, I'm Deepak";
+	 publi String greet() {
+		return "Hi Everyone, I'm Deepak"
 	}
 
 }

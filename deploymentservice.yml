@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins-automation-k8s-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: jenkins-automation-k8s
+  template:
+    metadata:
+      labels:
+        app: jenkins-automation-k8s
+    spec:
+      containers:
+      - name: jenkins-automation-k8s
+        image: mydocker2468/devops-automation
+        imagePullPolicy: ifNotPresent
+        ports:
+        - containerPort: 8081
+
+---
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: jenkins-automation-k8s-service
+spec:
+  selector:
+    app.kubernetes.io/name: jenkins-automation-k8s
+  ports:
+    - protocol: TCP
+      port: 8081
+      targetPort: 9376

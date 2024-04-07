@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: jenkins-automation-k8s
-        image: mydocker2468/devops-automation
+        image: mydocker2468/devops-automation:latest
         imagePullPolicy: ifNotPresent
         ports:
         - containerPort: 8081
